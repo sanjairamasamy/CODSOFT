@@ -1,0 +1,154 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Portfolio</title>
+        <meta name="description" content="This is a Portfolio website">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="portifolio.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script>
+            function res_down(){
+                const button = document.querySelector('.res_btn');
+
+                button.addEventListener('click', () => {
+                const filePath = button.getAttribute('assets/My_Resume.pdf');
+                const link = document.createElement('a');
+                link.href = filePath;
+                link.download = 'resume.pdf';
+                link.click();
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1 class="name">Sanjai Ramasamy</h1>
+            <nav class="nav-bar">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+
+        <main>
+            <section class="home" id="home">
+                <div>
+                    <h1>Hi, I'm <span class="span-text">Sanjai Ramasamy</span></h1>
+                    <h3>Frontend Developer</h3><br/>
+                    <input type="button" class="res_btn" data-file-path="Resume.txt" value="View Resume" onclick="res_down()">
+                </div>
+            </section>
+
+
+            <section class="about" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="assets/about.jpg"/>
+                        </div>
+                        <div class="about-col-2">
+                            <div>
+                                <h2 class="heading">About <span class="span-text">me</span></h2>
+                                <p>About
+                                    Final year student with a strong focus on front-end development. I'm skilled in HTML, CSS, and JavaScript, and I know how to use Bootstrap to make sites responsive on any device. Right now, I'm diving into learning React.js to take my skills to the next level. I've completed some thorough courses on Udemy to get a strong grasp of the basics, and I've already built some real websites to practice.</p>
+                            </div>
+                            <div class="skill">
+                                <h2 class="heading"><span class="span-text">My</span> Skills</h2>
+                                <p>I know the below mentioned languages.</p>
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>Bootstrap</li>
+                                    <li>React</li>
+                                </ul>
+                            </div>
+                        </div>
+                </div>
+            </section>
+
+
+            <section class="projects" id="projects">
+                <div>
+                    <h2 class="heading">My <span class="span-text">Projects</span></h2>
+                    <div class="project-list">
+                        <div>
+                            <h3>Website - Omnifood</h3>
+                            <p>OminiFood is a project focused on providing a hassle-free dining experience. Built entirely with HTML, CSS, and JavaScript, it offers a responsive interface accessible across various devices. Explore the project to discover its seamless functionality and user-friendly design.</p>
+                            <a href="https://omnifood-eat-without-cooking.pages.dev/" target="_blank">View</a>
+                        </div>
+                        <div>
+                            <h3>A Basic Calculator</h3>
+                            <p>This project comprises an elegant fusion of HTML and CSS to craft a sophisticated website housing a fundamental yet efficient calculator interface. Seamlessly integrated into the site's design, the calculator facilitates essential arithmetic operations with precision and clarity. Its intuitive user interface ensures a seamless user experience, enabling users to perform computations effortlessly.</p>
+                            <a href="#">View</a>
+                        </div>
+                        <div>
+                            <h3>Portfolio</h3>
+                            <p>I have meticulously crafted a bespoke Portfolio website solely utilizing HTML and CSS, which you currently have the privilege of exploring. This digital platform serves as a comprehensive introduction to my professional persona, encapsulating my skills, achievements, and aspirations. While the functionalities are tailored to suit a novice level, the design ethos and attention to detail reflect a commitment to professionalism and excellence.</p>
+                            <a href="#">View</a>
+                        </div>
+                        <div>
+                            <h3>Landing Page</h3>
+                            <p>The creation of the landing page, meticulously fashioned through the application of HTML and CSS, underscores a commitment to professional craftsmanship. This sophisticated digital gateway serves as an immersive introduction to the thematic essence it embodies. Designed with meticulous attention to detail, the landing page encapsulates the essence of its subject matter with elegance and clarity.</p>
+                            <a href="#">View</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="contact" id="contact">
+                <div>
+                    <h2 class="heading">Contact <span class="span-text">me</span></h2>
+                    <form action="">
+                        <table class="form-table">
+                            <tr>
+                                <td><input type="text" name="uname" value="" placeholder="Enter your name" required/></td>
+                            </tr>
+                            <tr>
+                                <td><input type="email" name="mail" value="" placeholder="Enter your e-mail id" required /></td>
+                            </tr>
+                            <tr>
+                                <td><input type="phone" name="mobile" value="" pattern="[0-9]{10}" placeholder="Enter your phone number" /></td>
+                            </tr>
+                            <tr>
+                                <td><textarea rows="5" cols="50" placeholder="Enter your message"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" value="Send Message" /></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+
+        <footer>
+            <div class="social">
+                <a href="mailto:sasanjairamasamy2003@gmail.com"><i class='bx bxl-gmail'></i></a>
+                <a href="https://www.linkedin.com/in/sanjairamasamy003/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            </div>
+            <div>
+            <ul>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+            <p class="copyright">&copy; 2024 SanjaiRamasamy | All rights reserved</p>
+        </footer>
+    </body>
+</html>
